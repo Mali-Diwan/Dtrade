@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"></link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- This is for nav bar-->
+    <nav class="navbar">
+
+    <div class="logo">
+        DTrade
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Stocks</a></li>
+        <li><a href="#">F&O</a></li>
+        <li><a href="#">Mutual Funds</a></li>
+        <li><a href="#">More</a></li>
+    </ul>
+
+    <div class="search-box"><div class="icon">
+        <i class="fa-solid fa-magnifying-glass"></i></div>
+    <input type="text"  placeholder="Search stocks...                               Ctrl+K">
+</div>
+<div class="nav-actions">
+        <a href="#" class="login-btn">Login</a>
+        <a href="#" class="signup-btn">Sign Up</a>
+    </div>
+
+</nav>
+
+<!-- Hero section-->
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Trade smart.<br>Grow more.</h1>
+
+        <p>
+            Only the obsessed and patient survive in the stock market; the rest call it gambling.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="start-btn">Start Trading</a>
+            <a href="#" class="explore-btn">Explore Markets</a>
+        </div>
+    </div>
+
+    <!--image log-->
+<div class="hero-image">
+    <img src="images/dtrade.png" alt="Dtrade logo" class="logo">
+    <div class="logo-base"><div class="logo-base">
+    <svg viewBox="0 0 420 80">
+
+        <!-- Glowing platform -->
+        <ellipse
+            class="platform"
+            cx="210"
+            cy="40"
+            rx="200"
+            ry="30"
+        />
+
+        <!-- Moving light -->
+        <circle class="moving-light" r="3">
+            <animateMotion
+                dur="3s"
+                repeatCount="indefinite"
+                path="M 10,40 A 200,30 0 1 1 410,40 A 200,30 0 1 1 10,40"
+            />
+        </circle>
+
+    </svg>
+</div></div>
+    </div>
+</section>
+
+
+<!--Cards section-->
+
+
+<section class="investments">
+    <h2>Explore Investments</h2>
+    <p>Choose what you want to invest in.</p>
+    <div class="market-cards">
+    <div class="stock-card">
+
+        <h3>Stocks</h3>
+
+        <div class="card-arrow">↗</div>
+
+        <div class="stock-phone">
+
+    <div class="phone-notch"></div>
+
+    <small>RENEWABLE ENERGY</small>
+
+    <h4 id="stock-price">₹792.52</h4>
+
+    <span class="stock-profit" id="stock-profit">+15.95 (2.24%)</span>
+
+    <div class="stock-chart">
+
+    <svg viewBox="0 0 210 110">
+
+        <polyline
+            class="chart-line"
+            points="0,90 20,80 40,85 60,60 80,70 100,45 120,55 140,30 160,42 180,18 210,10"
+        />
+
+    </svg>
+</div>
+<div class="chart-times">
+    <button>1D</button>
+    <button>1W</button>
+    <button>1M</button>
+    <button>1Y</button>
+    <button>3Y</button>
+    <button>5Y</button>
+</div>
+
+</div>
+
+    </div>
+
+    <!--ETF CARD-->
+    
+    <div class="etf-card">
+
+    <h3>ETFs</h3>
+    <p>Gold, Silver, International & Index ETFs</p>
+
+    <div class="card-arrow">↗</div>
+
+    <div class="etf-items">
+
+    <div class="etf-item">
+    <div class="etf-icon">🪙</div>
+    <span>Gold</span>
+</div>
+
+<div class="etf-item">
+    <div class="etf-icon">◉</div>
+    <span>Silver</span>
+</div>
+
+    <div class="etf-item">
+        <div class="etf-icon">🌐</div>
+        <span>International</span>
+    </div>
+
+    <div class="etf-item">
+        <div class="etf-icon">▥</div>
+        <span>Index</span>
+    </div>
+
+</div>
+
+
+</div>
+<div class="bonds-card">
+    <h2>Bonds</h2>
+    <div class="card-arrow">↗</div>
+
+    
+</div>
+<div class="ipo-card">
+    <h2>IPOs</h2>
+    <div class="card-arrow">↗</div>
+
+
+    <div class="ipo-phone">
+    <div class="ipo-screen">
+        
+        <!--screen one-->
+
+        <div class="ipo-frame ipo-frame-1">
+
+    <div class="ipo-tabs">
+        <span class="active">Open (4)</span>
+        <span>Applied</span>
+        <span>Closed</span>
+        <span>Upcoming</span>
+    </div>
+
+    <div class="ipo-filter">
+        IPO type: <strong>All</strong>
+    </div>
+
+    <div class="ipo-item">
+        <div class="ipo-icon">↗</div>
+        <div class="ipo-name">
+            <strong>Aravalli Healthtech</strong>
+            <small>Last day · SME</small>
+            <small>58.65x subscribed</small>
+        </div>
+        <button>Apply</button>
+    </div>
+
+    <div class="ipo-item">
+        <div class="ipo-icon">◯</div>
+        <div class="ipo-name">
+            <strong>Satpura Ltd</strong>
+            <small>Closes on 24 Jun</small>
+            <small>2.4x subscribed</small>
+        </div>
+        <button>Apply</button>
+    </div>
+
+    <div class="ipo-item">
+        <div class="ipo-icon">Q</div>
+        <div class="ipo-name">
+            <strong>Eastern Ghats Infra</strong>
+            <small>Closes on 24 Jun</small>
+            <small>42.80x subscribed</small>
+        </div>
+        <button>Apply</button>
+    </div>
+
+    <div class="ipo-item">
+        <div class="ipo-icon">▰</div>
+        <div class="ipo-name">
+            <strong>Himalaya Industries</strong>
+            <small>Closes on 24 Jun</small>
+        </div>
+        <button>Pre-apply</button>
+    </div>
+
+</div>
+        
+    </div>
+
+</div>
+</div>
+</section>
+
+<script src="working.js"></script>
+</body>
+</html>
