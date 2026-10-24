@@ -215,12 +215,13 @@ border-radius: 5px;
 .market-cards {
     display: grid;
     grid-template-columns: 640px 640px;
-    grid-template-rows: 200px 300px 200px;
+    grid-template-rows: 200px 300px 200px auto;
     gap: 20px;
-
     width: 1300px;
     margin: 40px auto;
 }
+
+
 
 .etf-card {
     width: 640px;
@@ -515,6 +516,17 @@ border-radius: 5px;
 
 /* ipo section */
 
+.ipo-screen {
+    position: relative;
+}
+
+.ipo-finger {
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
 .ipo-card {
     grid-column: 2;
     grid-row: 2 / 4;
@@ -558,6 +570,7 @@ border-radius: 5px;
     text-align: center;
     padding-top: 35px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 
@@ -650,6 +663,456 @@ border-radius: 5px;
     flex-shrink: 0;
 }
 
+    /* IPO frame 2 */
+.ipo-frame-2 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #F5F5F5;
+    font-size: 11px;
+}
+
+.ipo-frame-2 * {
+    box-sizing: border-box;
+}
+
+.ipo-frame-2 .ipo-company strong {
+    font-size: 12px;
+}
+
+.ipo-frame-2 .ipo-investment {
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.ipo-frame-2 hr {
+    margin: 9px 0;
+}
+
+.ipo-frame-2 h4 {
+    margin-bottom: 9px;
+}
+
+.ipo-frame-2 .ipo-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+}
+
+.ipo-frame-2 .ipo-detail-grid div {
+    min-width: 0;
+    padding: 6px 5px;
+    border-radius: 7px;
+    background: #252A25;
+}
+
+.ipo-frame-2 .ipo-detail-grid small {
+    font-size: 7px;
+}
+
+.ipo-frame-2 .ipo-detail-grid strong {
+    font-size: 9px;
+    overflow-wrap: anywhere;
+}
+
+.ipo-frame-2 .ipo-apply-button {
+    margin-top: 10px;
+    padding: 9px;
+    font-size: 10px;
+}
+
+
+/* Frame 2 - DTrade Colors */
+.ipo-frame-2 {
+    background: #181A1D;
+    color: #F5F5F5;
+}
+
+/* Company icon */
+.ipo-frame-2 .ipo-big-icon {
+    background: #30382A;
+    color: #B7D77A;
+    border: 1px solid #53633A;
+}
+
+/* Company name and closing date */
+.ipo-frame-2 .ipo-company strong {
+    color: #FFFFFF;
+}
+
+.ipo-frame-2 .ipo-company small {
+    color: #B0B5AC;
+}
+
+.ipo-frame-2 .ipo-company b {
+    color: #C8E795;
+}
+
+/* Investment amount panel */
+.ipo-frame-2 .ipo-investment {
+    background: #252C22;
+    border: 1px solid #53633A;
+    border-radius: 10px;
+}
+
+.ipo-frame-2 .ipo-investment strong {
+    color: #C8E795;
+}
+
+.ipo-frame-2 .ipo-investment span,
+.ipo-frame-2 .ipo-investment small {
+    color: #B0B5AC;
+}
+
+/* Separator and heading */
+.ipo-frame-2 hr {
+    border-top: 1px solid #41483B;
+}
+
+.ipo-frame-2 h4 {
+    color: #B7D77A;
+}
+
+/* Details cards */
+.ipo-frame-2 .ipo-detail-grid div {
+    background: #252A25;
+    border: 1px solid #414B32;
+}
+
+.ipo-frame-2 .ipo-detail-grid small {
+    color: #AEB5A6;
+}
+
+.ipo-frame-2 .ipo-detail-grid strong {
+    color: #F5F5F5;
+}
+
+/* Apply button */
+.ipo-frame-2 .ipo-apply-button {
+    background: #B7D77A;
+    color: #181A1D;
+    border: 1px solid #C8E795;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.ipo-frame-2 .ipo-apply-button:hover {
+    background: #C8E795;
+}
+
+/* IPO frame 3 */
+
+.ipo-frame-3 {
+    padding: 20px 14px;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.ipo-frame-3 h3 {
+    font-size: 15px;
+    margin: 0 0 6px;
+}
+
+.ipo-status-subtitle {
+    color: #888;
+    font-size: 9px;
+    margin-bottom: 18px;
+}
+
+.ipo-status-card {
+    background: #22262b;
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+}
+
+.ipo-status-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    background: #b7d77a;
+    color: #17191b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.ipo-status-card strong {
+    display: block;
+    font-size: 11px;
+}
+
+.ipo-status-card p {
+    color: #aaa;
+    font-size: 8px;
+}
+
+.ipo-status-card span {
+    color: #b7d77a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ipo-timeline {
+    margin-top: 20px;
+}
+
+.ipo-timeline-item {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+    color: #888;
+}
+
+.ipo-timeline-dot {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    border: 1px solid #555;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+}
+
+.ipo-timeline-item.completed .ipo-timeline-dot {
+    background: #b7d77a;
+    color: #17191b;
+    border-color: #b7d77a;
+}
+
+.ipo-timeline-item.active {
+    color: #f5f5f5;
+}
+
+.ipo-timeline-item.active .ipo-timeline-dot {
+    border-color: #b7d77a;
+    color: #b7d77a;
+}
+
+.ipo-timeline-item strong,
+.ipo-timeline-item small {
+    display: block;
+}
+
+.ipo-timeline-item strong {
+    font-size: 9px;
+    margin-bottom: 5px;
+}
+
+.ipo-timeline-item small {
+    font-size: 8px;
+    color: #888;
+}
+
+.ipo-pending {
+    color: #b7d77a;
+    font-size: 9px;
+    text-align: center;
+    padding: 10px;
+    background: #22262b;
+    border-radius: 8px;
+}
+
+
+.ipo-frame-4 {
+    padding: 24px 14px;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.ipo-allotted-icon {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: #b7d77a;
+    color: #17191b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.ipo-frame-4 h3 {
+    font-size: 16px;
+    margin: 0 0 7px;
+}
+
+.ipo-allotted-subtitle {
+    color: #999;
+    font-size: 9px;
+    margin-bottom: 22px;
+}
+
+.ipo-certificate {
+    padding: 20px 10px;
+    background: #22262b;
+    border: 1px solid #383d43;
+    border-radius: 14px;
+}
+
+.ipo-certificate-symbol {
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    background: #b7d77a;
+    color: #17191b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ipo-certificate strong,
+.ipo-certificate small {
+    display: block;
+}
+
+.ipo-certificate strong {
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.ipo-certificate small {
+    color: #999;
+    font-size: 8px;
+}
+
+.ipo-share-count {
+    margin-top: 22px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ipo-share-price {
+    margin-top: 8px;
+    color: #b7d77a;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.ipo-allotted-status {
+    margin-top: 16px;
+    padding: 10px 5px;
+    border-radius: 8px;
+    background: #22262b;
+    color: #b7d77a;
+    font-size: 9px;
+}
+
+.ipo-allotted-footer {
+    margin-top: 14px;
+    color: #888;
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+
+
+/* IPO phone frame switching */
+.ipo-screen {
+    position: relative;
+    overflow: hidden;
+}
+
+.ipo-screen > .ipo-frame-2,
+.ipo-screen > .ipo-frame-3,
+.ipo-screen > .ipo-frame-4 {
+    display: none;
+}
+
+/* Frame 3 and Frame 4 - Fit inside phone */
+.ipo-frame-3,
+.ipo-frame-4 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.ipo-frame-3 *,
+.ipo-frame-4 * {
+    box-sizing: border-box;
+}
+
+.ipo-frame-3 h1,
+.ipo-frame-3 h2,
+.ipo-frame-3 h3,
+.ipo-frame-4 h1,
+.ipo-frame-4 h2,
+.ipo-frame-4 h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.ipo-frame-3 p,
+.ipo-frame-4 p {
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.ipo-frame-3 button,
+.ipo-frame-4 button {
+    max-width: 100%;
+}
+
+.ipo-finger {
+    position: absolute;
+    z-index: 100;
+    width: 16px;
+    height: 16px;
+    background: #B7D77A;
+    border: 3px solid #F5F5F5;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #B7D77A;
+    pointer-events: none;
+    left: 70%;
+    top: 75%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+.ipo-screen {
+    position: relative;
+}
+
+.ipo-click-bubble {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #B7D77A;
+    border-radius: 50%;
+    background: #B7D77A55;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ipoBubble 0.5s ease-out forwards;
+}
+
+@keyframes ipoBubble {
+    0% {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
     
 /*Bond section*/
 
@@ -668,4 +1131,1078 @@ border-radius: 5px;
 
 .bonds-card h2 {
     margin-top: 25px;
+}
+
+
+
+
+.bonds-card {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #181A1D;
+    border: 1px solid #30343A;
+    border-radius: 25px;
+    color: #D0D3D7;
+    transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.bonds-card h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-size: 30px;
+    color: #F5F5F5;
+}
+
+.bonds-card p {
+    position: relative;
+    z-index: 2;
+    margin: 12px 0;
+    font-size: 16px;
+    color: #C2C5CA;
+}
+
+
+
+
+.bonds-rupee {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border: 1px solid #454A50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: #777D85;
+    opacity: 0.65;
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.bonds-card .card-arrow {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #30343A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B7D77A;
+    font-size: 28px;
+    z-index: 3;
+}
+
+.bonds-card:hover {
+    background: #242920;
+    border-color: #B7D77A;
+}
+
+.bonds-card:hover h2,
+.bonds-card:hover p {
+    color: #F5F5F5;
+}
+
+.bonds-card:hover .bonds-pattern span,
+.bonds-card:hover .bonds-rupee {
+    color: #B7D77A;
+    border-color: #71884A;
+}
+
+.bonds-card:hover .card-arrow {
+    background: #B7D77A;
+    color: #181A1D;
+    border-color: #B7D77A;
+}
+
+
+
+
+
+
+/* Restore original Bonds card size */
+.bonds-card {
+    min-height: 0;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+}
+
+/* Keep heading in its original position */
+.bonds-card h2 {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+/* Keep description centered */
+.bonds-card p {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Keep arrow above decorations */
+.bonds-card .card-arrow {
+    z-index: 5;
+}
+
+/* Decorations stay behind text and arrow */
+.bonds-pattern,
+.bonds-rupee {
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Remove accidental overlap from decorative elements */
+.bonds-pattern span {
+    max-width: 12%;
+    overflow: hidden;
+}
+/* Remove Bonds decorative pattern */
+.bonds-pattern {
+    display: none;
+}
+
+/* Keep Rupee sign visible */
+.bonds-rupee {
+    display: flex;
+}
+
+  /*arrow hover of all cards*/
+
+/* Hide arrows by default */
+.stock-card .card-arrow,
+.etf-card .card-arrow,
+.ipo-card .card-arrow,
+.bonds-card .card-arrow {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show arrow when hovering over the card */
+.stock-card:hover .card-arrow,
+.etf-card:hover .card-arrow,
+.ipo-card:hover .card-arrow,
+.bonds-card:hover .card-arrow {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*extra card css*/
+/*sip card*/
+
+.sip-card {
+    grid-column: 1;
+    width: 100%;
+    height: 260px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 30px;
+    background: #181A1D;
+    color: #F5F5F5;
+    border: 1px solid #30343A;
+    border-radius: 25px;
+}
+
+.sip-card .card-arrow {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.sip-card:hover .card-arrow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.market-cards .sip-card {
+    grid-column: 1;
+    grid-row: 4;
+    width: 640px;
+    height: 670px;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    padding: 30px;
+    background: #181A1D;
+    color: #F5F5F5;
+    border: 1px solid #30343A;
+    border-radius: 25px;
+}
+
+.market-cards .sip-card .card-arrow {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.market-cards .sip-card:hover .card-arrow {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.sip-card {
+    position: relative;
+    overflow: hidden;
+    background: #181a1d;
+    border: 1px solid #30343a;
+    border-radius: 25px;
+    padding: 25px;
+    color: #f5f5f5;
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+.sip-card h3 {
+    margin: 12px 0 8px;
+    font-size: 24px;
+}
+
+.sip-card p {
+    color: #a5a9ad;
+    margin-bottom: 18px;
+}
+
+.sip-tag {
+    color: #B7D77A;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.sip-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sip-amount span,
+.sip-chart-label {
+    color: #a5a9ad;
+    font-size: 12px;
+}
+
+.sip-amount strong {
+    color: #B7D77A;
+    font-size: 25px;
+}
+
+.sip-chart {
+    position: relative;
+    height: 180px;
+    margin: 25px 0 15px;
+    overflow: hidden;
+}
+
+.sip-chart-line {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        #B7D77A45,
+        transparent
+    );
+    clip-path: polygon(
+        0 90%, 15% 70%, 30% 80%,
+        45% 45%, 60% 60%, 75% 25%,
+        90% 35%, 100% 5%, 100% 100%, 0 100%
+    );
+    border-top: 2px solid #B7D77A;
+    animation: sipGlow 2s ease-in-out infinite alternate;
+}
+
+.sip-chart-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sip-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #181a1d;
+    background: #B7D77A;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.sip-button:hover {
+    box-shadow: 0 0 18px #B7D77A80;
+    transform: translateY(-2px);
+}
+
+.sip-card .card-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #B7D77A;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+@keyframes sipGlow {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.sip-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+    padding: 16px;
+    background: #202321;
+    border: 1px solid #30343a;
+    border-radius: 14px;
+}
+
+.sip-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sip-summary span {
+    color: #a5a9ad;
+    font-size: 12px;
+}
+
+.sip-summary strong {
+    font-size: 16px;
+}
+
+.sip-summary .sip-value {
+    color: #B7D77A;
+}
+
+
+/*f and o card*/
+
+
+.fo-card {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 25px;
+    background: #181a1d;
+    border: 1px solid #30343a;
+    border-radius: 25px;
+    color: #f5f5f5;
+}
+
+.fo-tag {
+    color: #B7D77A;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.fo-card h3 {
+    margin: 12px 0 8px;
+    font-size: 24px;
+}
+
+.fo-card p {
+    color: #a5a9ad;
+    font-size: 14px;
+}
+
+.fo-market {
+    margin: 20px 0;
+    padding: 0 15px;
+    background: #202321;
+    border-radius: 14px;
+}
+
+.fo-market-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+}
+
+.fo-market-row + .fo-market-row {
+    border-top: 1px solid #30343a;
+}
+
+.fo-market-row div,
+.fo-price {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fo-market-row strong {
+    font-size: 14px;
+}
+
+.fo-market-row span {
+    color: #a5a9ad;
+    font-size: 11px;
+}
+
+.fo-price {
+    text-align: right;
+}
+
+.fo-market-row .fo-up {
+    color: #B7D77A;
+}
+
+.fo-market-row .fo-down {
+    color: #ff7777;
+}
+
+.fo-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.fo-option {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #202321;
+}
+
+.fo-option strong {
+    font-size: 15px;
+}
+
+.fo-option span {
+    color: #a5a9ad;
+    font-size: 12px;
+}
+
+.fo-call strong {
+    color: #B7D77A;
+}
+
+.fo-put strong {
+    color: #ff7777;
+}
+
+.fo-button {
+    display: inline-block;
+    padding: 11px 16px;
+    border-radius: 10px;
+    background: #B7D77A;
+    color: #181a1d;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.fo-button:hover {
+    box-shadow: 0 0 18px #B7D77A80;
+    transform: translateY(-2px);
+}
+
+.fo-card .card-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #B7D77A;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+
+.fo-quote {
+    margin-top: 35px;
+    padding: 24px;
+    border: 1px solid #30343a;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #20251f, #1b1d1f);
+}
+
+.fo-quote-icon {
+    color: #B7D77A;
+    font-size: 24px;
+}
+
+.fo-quote p {
+    color: #e0e2df;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 12px 0;
+}
+
+.fo-quote-label {
+    color: #B7D77A;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+/* ========================================
+   DTRADE FOOTER
+   Black + Pistachio Colour Palette
+======================================== */
+
+.dtrade-footer {
+    --footer-bg: #000000;
+    --footer-text: #b9dc7b;
+    --footer-muted: #a0a990;
+    --footer-border: #25291f;
+    --footer-hover: #d3f49a;
+
+    width: 100%;
+    padding: 55px 5% 30px;
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.dtrade-footer *,
+.dtrade-footer *::before,
+.dtrade-footer *::after {
+    box-sizing: border-box;
+}
+
+.dtrade-footer a {
+    color: var(--footer-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.dtrade-footer a:hover {
+    color: var(--footer-hover);
+}
+
+/* ========================================
+   TOP FOOTER LAYOUT
+======================================== */
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.35fr 0.75fr 1.65fr;
+    gap: 55px;
+    padding: 0 1.2% 45px;
+    align-items: start;
+}
+
+.footer-brand,
+.footer-company,
+.footer-products {
+    min-width: 0;
+}
+
+/* ========================================
+   BRAND SECTION
+======================================== */
+
+.footer-brand h2 {
+    color: var(--footer-text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0 0 25px;
+}
+
+.footer-description {
+    color: var(--footer-muted);
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+    max-width: 390px;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.footer-contact a {
+    color: var(--footer-text);
+    padding-bottom: 4px;
+    border-bottom: 1px dashed var(--footer-muted);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 27px;
+}
+
+.footer-socials a {
+    color: var(--footer-muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer-socials a:hover {
+    color: var(--footer-hover);
+}
+
+.footer-copyright {
+    color: var(--footer-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 48px 0 0;
+}
+
+/* ========================================
+   COMPANY AND PRODUCT HEADINGS
+======================================== */
+
+.footer-company h3,
+.footer-products h3 {
+    color: var(--footer-text);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 5px 0 25px;
+}
+
+.footer-company {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.footer-company a,
+.footer-product-columns a {
+    line-height: 1.4;
+}
+
+/* ========================================
+   PRODUCT COLUMNS
+======================================== */
+
+.footer-product-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.footer-product-columns > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    min-width: 0;
+}
+
+/* ========================================
+   CATEGORY SECTION
+======================================== */
+
+.footer-market-section {
+    border-top: 1px solid var(--footer-border);
+    padding-top: 20px;
+}
+
+/* Nine horizontal tabs */
+
+.footer-category-tabs {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--footer-border);
+    scrollbar-width: thin;
+    scrollbar-color: var(--footer-border) transparent;
+}
+
+.footer-tab {
+    position: relative;
+    flex: 1 0 auto;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--footer-muted);
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 12px 16px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-tab:hover {
+    color: var(--footer-hover);
+}
+
+.footer-tab.active {
+    color: var(--footer-text);
+    font-weight: 600;
+}
+
+.footer-tab.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+    background: var(--footer-text);
+}
+
+/* ========================================
+   CATEGORY LINKS
+======================================== */
+
+.footer-category-content {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 25px 35px;
+    padding: 27px 12px 35px;
+    align-items: start;
+    min-height: 190px;
+}
+
+.footer-category-content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+    min-width: 0;
+}
+
+.footer-category-content a {
+    color: var(--footer-muted);
+    font-size: 16px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.footer-category-content a:hover {
+    color: var(--footer-hover);
+}
+
+/* ========================================
+   LEGAL / OTHER LINKS
+======================================== */
+
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 17px 0;
+    border-top: 1px solid var(--footer-border);
+    padding-top: 25px;
+    line-height: 1.6;
+}
+
+.footer-legal strong {
+    color: var(--footer-text);
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.footer-legal a {
+    color: var(--footer-muted);
+    font-size: 14px;
+    padding: 0 13px;
+    border-right: 1px solid #454b3e;
+}
+
+.footer-legal a:last-child {
+    border-right: none;
+}
+
+.footer-legal a:hover {
+    color: var(--footer-hover);
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+    .dtrade-footer {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-copyright {
+        margin-top: 35px;
+    }
+
+    .footer-category-tabs {
+        justify-content: flex-start;
+    }
+
+    .footer-category-content {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+    .dtrade-footer {
+        padding: 35px 20px 25px;
+        font-size: 14px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 0 0 30px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-brand h2 {
+        font-size: 30px;
+    }
+
+    .footer-company h3,
+    .footer-products h3 {
+        margin-bottom: 20px;
+    }
+
+    .footer-product-columns {
+        gap: 20px;
+    }
+
+    .footer-contact {
+        gap: 25px;
+    }
+
+    .footer-copyright {
+        margin-top: 30px;
+    }
+
+    .footer-market-section {
+        padding-top: 16px;
+    }
+
+    .footer-tab {
+        font-size: 13px;
+        padding: 0 10px 14px;
+    }
+
+    .footer-category-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 15px;
+        padding: 23px 5px 30px;
+        min-height: 0;
+    }
+
+    .footer-category-content > div {
+        gap: 16px;
+    }
+
+    .footer-category-content a {
+        font-size: 14px;
+    }
+
+    .footer-legal {
+        gap: 13px 0;
+        padding-top: 20px;
+    }
+
+    .footer-legal strong {
+        width: 100%;
+    }
+
+    .footer-legal a {
+        font-size: 12px;
+        padding: 0 9px;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 360px) {
+    .dtrade-footer {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .footer-category-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 10px;
+    }
+
+    .footer-product-columns {
+        gap: 12px;
+    }
+}
+
+
+/*for mobile responsivees cards*/
+
+/* =================================
+   D TRADE MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        flex-wrap: wrap;
+        padding: 16px;
+        gap: 15px;
+    }
+
+    .logo {
+        margin-right: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-left: 0;
+    }
+
+    .nav-actions {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Hero section */
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 16px;
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 48px);
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image .logo {
+        width: min(100%, 320px);
+        margin-left: 0;
+    }
+
+    .logo-base {
+        width: min(90%, 300px);
+        margin-left: 0;
+    }
+
+    /* Investment section */
+    .investments {
+        padding: 30px 16px;
+    }
+
+    .market-cards {
+        width: 100%;
+        max-width: 640px;
+        box-sizing: border-box;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        margin: 30px auto;
+    }
+
+    /* Fit all investment cards */
+    .market-cards > * {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        transform: none;
+    }
+
+    .stock-card,
+    .ipo-card {
+        height: 500px;
+    }
+
+    .etf-card {
+        height: 200px;
+    }
+
+    .bonds-card {
+        height: 250px;
+    }
+
+    .sip-summary {
+        grid-template-columns: 1fr;
+    }
 }
